@@ -1,0 +1,5 @@
+com/siooka/siret/controller/SiretControllerTest.class
+com/siooka/siret/service/metier/SiretServiceMetierTest.class
+com/siooka/siret/SiretApplicationTests.class
+com/siooka/siret/service/delegate/SiretDelegateServiceTest.class
+com/siooka/siret/repository/EtablissementRepositoryTest.class

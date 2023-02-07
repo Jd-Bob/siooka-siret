@@ -8,6 +8,6 @@ import java.io.File;
 import java.util.List;
 
 public interface SiretServiceMetier {
-    SiretDetailsDto getSiretDetails(String id);
+    SiretDetailsDto getSiretDetails(String token, String id);
     List<Etablissement> getAll();
 }

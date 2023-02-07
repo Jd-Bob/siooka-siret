@@ -31,7 +31,7 @@ public class SiretServiceMetierTest {
 
     @Test
     public void testGetSiretDetailsNull() {
-        SiretDetailsDto expected = siretServiceMetier.getSiretDetails("siret-test");
+        SiretDetailsDto expected = siretServiceMetier.getSiretDetails("Bearer token", "siret-test");
         Assertions.assertNull(expected);
     }
 

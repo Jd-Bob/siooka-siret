@@ -22,8 +22,9 @@ public class RestTemplateInterceptor implements ClientHttpRequestInterceptor {
     public ClientHttpResponse intercept(HttpRequest request, byte[] body, ClientHttpRequestExecution execution) throws IOException {
         logRequest(request, body);
         try {
-            request.getHeaders().setAccept(Collections.singletonList(MediaType.APPLICATION_JSON));
-            request.getHeaders().setBearerAuth("656e388c-ed34-3010-9c85-fd8267f9569b");
+            System.out.println("Authorization ===== " + request.getHeaders().get("Authorization"));
+//            request.getHeaders().setAccept(Collections.singletonList(MediaType.APPLICATION_JSON));
+//            request.getHeaders().setBearerAuth("656e388c-ed34-3010-9c85-fd8267f9569b");
             return execution.execute(request, body);
         }  catch (ResourceAccessException e) {
             return null;

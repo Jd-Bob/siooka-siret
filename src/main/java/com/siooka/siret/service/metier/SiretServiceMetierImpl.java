@@ -25,8 +25,8 @@ public class SiretServiceMetierImpl implements SiretServiceMetier {
     @Autowired
     EtablissementMapper etablissementMapper;
 
-    public SiretDetailsDto getSiretDetails(String id) {
-        SiretDetailsDto siretDto = siretDelegate.getSiretDetails(id);
+    public SiretDetailsDto getSiretDetails(String token, String id) {
+        SiretDetailsDto siretDto = siretDelegate.getSiretDetails(token, id);
         if (siretDto.getEtablissement() != null) {
             Etablissement etablissement = etablissementMapper.etablissementDTOtoEtablissement(siretDto.getEtablissement());
             repository.save(etablissement);

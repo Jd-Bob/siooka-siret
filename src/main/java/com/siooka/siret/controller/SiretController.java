@@ -10,10 +10,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -29,12 +26,12 @@ public class SiretController {
     SiretServiceMetier siretBusinessService;
 
     @GetMapping(path = "/siret/{id}")
-    public ResponseEntity<SiretDetailsDto> getSiretDetails(@PathVariable String id) {
-        SiretDetailsDto siret = siretBusinessService.getSiretDetails(id);
+    public ResponseEntity<SiretDetailsDto> getSiretDetails(@RequestHeader("Authorization") String token, @PathVariable String id) {
+        SiretDetailsDto siret = siretBusinessService.getSiretDetails(token.substring(7), id);
         if (siret != null) {
             return ResponseEntity.ok(siret);
         }
-        return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
     }
 
     @GetMapping(path = "/sirets")

@@ -11,7 +11,7 @@ import org.springframework.boot.context.properties.bind.ConstructorBinding;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.validation.annotation.Validated;
 
-@ConfigurationProperties(prefix = "database")
+@ConfigurationProperties(prefix = "exported")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor

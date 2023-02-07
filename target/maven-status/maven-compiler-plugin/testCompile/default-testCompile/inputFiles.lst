@@ -1,0 +1,5 @@
+/home/bob/workspaces/siooka/siooka-siret/src/test/java/com/siooka/siret/repository/EtablissementRepositoryTest.java
+/home/bob/workspaces/siooka/siooka-siret/src/test/java/com/siooka/siret/controller/SiretControllerTest.java
+/home/bob/workspaces/siooka/siooka-siret/src/test/java/com/siooka/siret/SiretApplicationTests.java
+/home/bob/workspaces/siooka/siooka-siret/src/test/java/com/siooka/siret/service/metier/SiretServiceMetierTest.java
+/home/bob/workspaces/siooka/siooka-siret/src/test/java/com/siooka/siret/service/delegate/SiretDelegateServiceTest.java
