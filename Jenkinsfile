@@ -10,11 +10,11 @@ node {
             sh "./mvnw clean install"
         }
         stage("java package") {
-            sh "docker stop demo"
-            sh "docker rmi demo"
+            sh "docker stop siret"
+            sh "docker rmi siret"
         }
         stage("docker image") {
-            def customImage = docker.build("demo", ".")
+            def customImage = docker.build("siret", ".")
         }
     }
 
@@ -30,7 +30,7 @@ node {
         }
 
         stage("Deployment") {
-            sh "docker run -p 8081:8081 demo"
+            sh "docker run -p 8081:8081 siret"
         }
     }
 }

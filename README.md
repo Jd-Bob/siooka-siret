@@ -1,3 +1,18 @@
+environnement:
+- java 17
+- mvn 3.6
+
+framework: spring boot, spring cloud config server,
+           spring cloud eureka server,
+           spring cloud admin server,
+           spring cloud configuration server
+           spring cloud gateway router
+           
+architecture: microservice + multi-couches
+
+base de donnees: H2 avec JPA
+
+
 Chaque microservice peut etre lancer soit
    - soit via jenkins avec la configuration indique dans le capture Screenshot from 2023-02-07 22-36-59.png
    - soit via docker :
